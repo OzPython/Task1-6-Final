@@ -1,0 +1,107 @@
+li a {
+    color: green;
+    
+}
+body {
+    background-color: #cccccc;
+    /*background:url("images/Final.jpg") no-repeat right bottom;*/
+    padding-bottom: 20px;
+
+}
+html {
+    overflow-y: hidden;
+}
+h1[class ="head"],h2[class ="head"],h3[class ="head"]{
+    text-align: center;
+}
+
+.whitebox {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #FFF;
+    border-radius: 8px;
+    padding:1em;
+ 
+    /*filter: alpha(opacity=90);*/
+      position: fixed;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -18%);
+
+}
+.warning {
+    
+    border: 2px solid;
+    border-color:  #E80000;
+    border-radius: 5px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    
+    background-color: #FFBABA ;
+    padding:.3em;
+    opacity:0.6;
+    filter: alpha(opacity=60);
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -2%);
+}
+.listing{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color:  	#FFF;
+    border-radius: 2px;
+    padding:.2em;
+    padding-right: .8em;
+    opacity:0.6;
+    /*filter: alpha(opacity=90);*/
+
+}
+input[type="submit"]{ 
+            padding:0.5em 1em; line-height:1em; cursor:pointer;
+            border-radius:4px; color:#000; font-weight:bold; font-size:inherit;
+            border:solid 1px #ccc;	box-shadow:0 1px 5px rgba(0,0,0,0.2);
+            background-position: center bottom;
+}
+            
+            /* Gradient Generator by : http://www.colorzilla.com/gradient-editor/ */
+            
+input[type="submit"]:active, 
+{
+    -webkit-box-shadow: none; box-shadow:none;
+}
+input[type="radio"]{
+    position: absolute;
+    left: -999em;
+}
+		
+label:before { 
+    display: inline-block; position: relative; top:0.25em; left:-2px; 
+    content:''; width:25px; height:25px;
+    background-image:url(images/formelements.png);
+}
+	
+input[type="radio"] + label:before { background-position: -25px -25px;}	 	
+input[type="radio"]:checked + label:before { background-position: -25px 0;}
+
+
+footer{
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    left:  43%;
+}
+hr{
+    position: absolute;
+    z-index: 1;
+    left:0px;
+    
+    width:100%;
+    bottom: 30px;
+}

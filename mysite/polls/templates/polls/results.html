@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Choices</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />     
+    </head>
+    <body>
+        <div class="whitebox" align="center">
+            <h1 class ="head">{{ poll.question }}</h1>
+            <div align="justify" class="listing">
+                <ul>
+                {% for choice in poll.choice_set.all %}
+                    <li><b><big><font color="Black"><bold>{{ choice.choice_text }}</bold></font> <font color="Green">&#10097; &#10097; &#10097;</font> <font color="Black">{{ choice.votes }} vote{{ choice.votes|pluralize }}</font></big></b></li>
+                {% endfor %}
+                </ul>
+            </div>
+            <a href="{% url 'polls:detail' poll.id %}">Vote again?</a>
+            <a href="{% url 'polls:index'%}"> Pick Another Poll</a>
+        </div>
+           <hr>
+            <footer>
+                <p>&copy; Oz KnightWalker 2014</p>
+            </footer>
+
+    </body>
+</html>

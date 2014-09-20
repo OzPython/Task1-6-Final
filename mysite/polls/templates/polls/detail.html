@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset=utf-8>
+    <title>Choices</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+  </head>
+
+  <body>
+    {% if error_message %}
+        <script >
+        {
+            alert( "You didn't select a choice." );
+        }
+        </script> 
+        <div class="warning">
+            <p> <img src="{% static 'polls/images/error.png' %}" style="float:left;"/><strong>{{ error_message }}</strong></p>
+        </div>
+    {% else %}
+        
+    {% endif %}
+    <div class="whitebox" align="center">
+        <h1 class ="head">{{ poll.question }}</h1>
+        <h3 class ="head">&nbsp;&nbsp;&nbsp;&nbsp;Please Pick Your Choice:</h3>
+        <div align="justify" class="listing">
+            <form action="{% url 'polls:vote' poll.id %}" method="post">
+            {% csrf_token %}
+            {% for choice in poll.choice_set.all %}
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+            {% endfor %}
+        </div>
+        <br />
+        <input type="submit" value="Vote"  />
+        </form>
+    </div>
+    
+    <hr>
+
+    <footer>
+        <p>&copy; Oz KnightWalker 2014</p>
+    </footer>
+
+  </body>
+</html>

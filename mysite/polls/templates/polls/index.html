@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Polls </title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+    
+    </head>
+    <body>
+    {% if latest_poll_list %}
+        <div class="whitebox">
+            <h1 class ="head">Polls for today :</h1>
+            <ul>
+            {% for poll in latest_poll_list %}
+                <!--<li><a href="/polls/{{ poll.id }}/">{{ poll.question }}</a></li>-->
+                <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    
+    {% else %}
+        <div class="warning">
+            <h2 class ="head"><img src="{% static 'polls/images/error.png' %}" style="float:left;"/>No polls are available.</h2>
+        </div>
+    {% endif %}
+    
+    
+    <hr>
+
+    <footer>
+        <p>&copy; Oz KnightWalker 2014</p>
+    </footer>
+
+  </body>
+</html>
