@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Homepage </title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+    
+    </head>
+    <body>
+        <div class="whitebox" align="center">
+            <h1 class ="head"><font color="white" class="black">Welcome</font><font color="black">To</font><font color="white" class="black">My</font><font color="black">Polling</font><font color="white" class="black">App!</font></h1>
+            <a href="{% url 'polls:index'%}">
+            <button type="button" class="success"><b>Go To My Polls &#10097;&#10097;</b></button>
+            </a>
+        </div>
+    
+    <hr>
+
+    <footer>
+        <p>&copy; Oz KnightWalker 2014</p>
+    </footer>
+
+  </body>
+</html>

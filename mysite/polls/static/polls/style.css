@@ -21,7 +21,7 @@ h1[class ="head"],h2[class ="head"],h3[class ="head"]{
     width: fit-content;
     background-color: #FFF;
     border-radius: 8px;
-    padding:1em;
+    padding:.8em;
  
     /*filter: alpha(opacity=90);*/
       position: fixed;
@@ -60,35 +60,47 @@ h1[class ="head"],h2[class ="head"],h3[class ="head"]{
     padding:.2em;
     padding-right: .8em;
     opacity:0.6;
-    /*filter: alpha(opacity=90);*/
-
 }
-input[type="submit"]{ 
-            padding:0.5em 1em; line-height:1em; cursor:pointer;
-            border-radius:4px; color:#000; font-weight:bold; font-size:inherit;
-            border:solid 1px #ccc;	box-shadow:0 1px 5px rgba(0,0,0,0.2);
-            background-position: center bottom;
+input[type="submit"], .success{ 
+    padding:0.5em 1em;
+    line-height:1em;
+    cursor:pointer;
+    border-radius:4px;
+    color:#FFF;
+    font-weight:bold;
+    font-size:inherit;
+    border:solid 1px #ccc;
+    box-shadow:0 1px 5px rgba(0,0,0,0.2);
+    background-position: center bottom;
+    background-color:#5cb85c;
+    cursor:pointer;
+    
+}                    
+input[type="submit"]:active, .success:active {
+    -webkit-box-shadow: none;
+    box-shadow:none;
 }
-            
-            /* Gradient Generator by : http://www.colorzilla.com/gradient-editor/ */
-            
-input[type="submit"]:active, 
-{
-    -webkit-box-shadow: none; box-shadow:none;
+input[type="submit"]:hover, .success:hover{
+    background-color:#3d8b3d;
 }
 input[type="radio"]{
     position: absolute;
     left: -999em;
-}
-		
+}		
 label:before { 
     display: inline-block; position: relative; top:0.25em; left:-2px; 
-    content:''; width:25px; height:25px;
+    content:'';
+    width:25px;
+    height:25px;
     background-image:url(images/formelements.png);
 }
 	
-input[type="radio"] + label:before { background-position: -25px -25px;}	 	
-input[type="radio"]:checked + label:before { background-position: -25px 0;}
+input[type="radio"] + label:before {
+    background-position: -25px -25px;
+}	 	
+input[type="radio"]:checked + label:before {
+    background-position: -25px 0;
+}
 
 
 footer{
@@ -105,3 +117,13 @@ hr{
     width:100%;
     bottom: 30px;
 }
+.black{
+    display: inline-block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #000000;
+    padding:.1em;
+}
+
+

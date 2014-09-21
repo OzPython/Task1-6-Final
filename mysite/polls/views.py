@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from django.views import generic
@@ -7,7 +7,7 @@ from polls.models import Poll, Choice
 
 
 def homepage(request):
-    return HttpResponse("Hello, world. You're at the poll index.")
+    return render_to_response('polls/Home.html')
 
 # enables the url /polls
 class IndexView(generic.ListView):

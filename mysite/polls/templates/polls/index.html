@@ -16,6 +16,10 @@
                 <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
             {% endfor %}
             </ul>
+            <br/>
+            <a href="{% url 'home'%}">
+            <button type="button" class="success"><b>&#10096; &#10096; Go Back</b></button>
+            </a>
         </div>
     
     {% else %}

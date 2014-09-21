@@ -15,8 +15,14 @@
                 {% endfor %}
                 </ul>
             </div>
-            <a href="{% url 'polls:detail' poll.id %}">Vote again?</a>
-            <a href="{% url 'polls:index'%}"> Pick Another Poll</a>
+            <br/>
+            <a href="{% url 'polls:detail' poll.id %}">
+                <button type="button" class="success" style="float: left"><b>Vote again?</b></button>
+            </a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="{% url 'polls:index'%}">
+                <button type="button" class="success" style="float: right"><b>Pick Another Poll</b></button>
+            </a>
         </div>
            <hr>
             <footer>
